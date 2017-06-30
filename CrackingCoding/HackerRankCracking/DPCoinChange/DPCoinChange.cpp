@@ -30,39 +30,45 @@ using namespace std;
 
 // Dynamic Programming
 
-#define MAX_VALUE 251
-
-bool checked_values[MAX_VALUE] = { false };
-
+/* // Method 1 based off discussion
 long long make_change(vector<int> coins, int money) {
 
-    int num_ways = 0;
+    vector<long long> num_ways;
+    num_ways.resize(money + 1);
 
-    cout << "DEBUG: Checking Value " << money << endl;
+    // Base Case
+    num_ways[0] = 1;
 
-    // Base Cases
-    if (money == 0) {
-        cout << "DEBUG : Zero" << endl;
-        return 1;
-    }
-    if (money < 0)
-        return 0;
-
-    // Check if money value has already been stored
-    if (checked_values[money]) {
-        cout << "DEBUG : Skipping" << endl;
-        return 0;
-    }
-    else {
-        checked_values[money] = true;
-    }
-
-    // Recursion
     for (int coin : coins) {
-        num_ways += make_change(coins, money - coin);
+        for (int i = coin; i < num_ways.size(); i++) {
+            num_ways[i] += num_ways[i - coin];
+        }
     }
 
-    return num_ways;
+    return num_ways[money];
+}
+*/
+
+// Method 2 - My own (basically reversed of above)
+// Finds answer by figuring out the number of ways to use coins to get
+// to a certain value
+long long make_change(vector<int> coins, int money) {
+
+    // Initialize Array
+    vector<long long> num_ways;
+    num_ways.resize(money + 1);
+
+    // Base Case - Only one way to get to "Money", which is no coins used
+    num_ways[money] = 1;
+
+    for (int coin : coins) {
+        for (int i = money; i >= coin; i--) {
+            num_ways[i - coin] += num_ways[i];
+        }
+    }
+
+    // Number of ways to get to 0 is the solution
+    return num_ways[0];
 }
 
 int main() {
