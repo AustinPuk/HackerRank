@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeftRotation", "LeftRotatio
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeapsMedian", "HeapsMedian\HeapsMedian.vcxproj", "{BB75E648-A669-40D4-B91A-B2B4534EC371}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BubbleSort", "BubbleSort\BubbleSort.vcxproj", "{8D61EB70-86C0-455A-84D0-9338B5F23154}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{BB75E648-A669-40D4-B91A-B2B4534EC371}.Release|x64.Build.0 = Release|x64
 		{BB75E648-A669-40D4-B91A-B2B4534EC371}.Release|x86.ActiveCfg = Release|Win32
 		{BB75E648-A669-40D4-B91A-B2B4534EC371}.Release|x86.Build.0 = Release|Win32
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Debug|x64.ActiveCfg = Debug|x64
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Debug|x64.Build.0 = Debug|x64
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Debug|x86.ActiveCfg = Debug|Win32
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Debug|x86.Build.0 = Debug|Win32
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Release|x64.ActiveCfg = Release|x64
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Release|x64.Build.0 = Release|x64
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Release|x86.ActiveCfg = Release|Win32
+		{8D61EB70-86C0-455A-84D0-9338B5F23154}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
